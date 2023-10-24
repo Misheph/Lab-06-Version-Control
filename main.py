@@ -6,6 +6,15 @@ def encode(password):
             current_password += str(i)
     return current_password
 
+
+def decode(password):
+    current_password = ""
+    for i in password:
+        i = (int(i) - 3) % 10
+        current_password += str(i)
+    return current_password
+
+
 if __name__ == "__main__": 
     #loop to keep program running
     while True:
